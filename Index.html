@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Totem de procedimentos</title>
+    <style>
+      body {
+        background-color: #4285f4; /* Cor de fundo azul */
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h1 {
+        color: #fff;
+        font-size: 36px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      button {
+        background-color: #fff;
+        color: #4285f4;
+        font-size: 24px;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 50px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Totem de procedimentos</h1>
+      <p>Clique para iniciar</p>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('body').addEventListener('click', function() {
+          var html = `
+            <div class="container">
+              <button id="btn-drive">Ir para o Google Drive</button>
+              <button id="btn-form">Abrir formulário do Google</button>
+            </div>
+          `;
+          document.querySelector('body').innerHTML = html;
+
+          document.getElementById('btn-drive').addEventListener('click', function() {
+            window.location.href = 'https://drive.google.com/drive/folders/12IIDN2nlcT35fD5LLIIz3WhyvgtL4EDY';
+          });
+
+          document.getElementById('btn-form').addEventListener('click', function() {
+            window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSec1la-JfLEBVD1tspczYakDMl2-jP3XJxT4D_jK4c0ERKT_g/viewform';
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
